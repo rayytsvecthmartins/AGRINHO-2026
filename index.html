@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agro Forte | Futuro Sustentável</title>
+<title>Agro Forte - Futuro Sustentável</title>
 
 <style>
 
@@ -13,49 +15,36 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 scroll-behavior:smooth;
-font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
 
-background:#f4f8f2;
+background:#eef7ec;
 color:#333;
-line-height:1.6;
 
 }
 
 header{
 
-background:linear-gradient(90deg,#1b5e20,#43a047);
-color:white;
-padding:20px;
 position:fixed;
-width:100%;
 top:0;
-z-index:1000;
-
-}
-
-nav{
-
+left:0;
+width:100%;
+background:#1b5e20;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 8%;
+z-index:999;
 
 }
 
-nav h2{
+header h1{
 
+color:white;
 font-size:28px;
-
-}
-
-nav ul{
-
-display:flex;
-list-style:none;
-gap:20px;
 
 }
 
@@ -63,6 +52,7 @@ nav a{
 
 color:white;
 text-decoration:none;
+margin-left:20px;
 font-weight:bold;
 transition:.3s;
 
@@ -70,7 +60,7 @@ transition:.3s;
 
 nav a:hover{
 
-color:#c8e6c9;
+color:#b2ff59;
 
 }
 
@@ -78,64 +68,69 @@ color:#c8e6c9;
 
 height:100vh;
 
+background:
+
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+
+url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 
-background:url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1400&q=80");
-
-background-size:cover;
-background-position:center;
-
 text-align:center;
 
 color:white;
 
+padding:20px;
+
 }
 
-.banner h1{
+.banner h2{
 
 font-size:60px;
-background:rgba(0,0,0,.5);
-padding:15px;
+margin-bottom:20px;
 
 }
 
 .banner p{
 
-margin-top:20px;
 font-size:22px;
-background:rgba(0,0,0,.5);
-padding:10px;
+max-width:800px;
 
 }
 
-button{
+.botao{
 
-padding:12px 25px;
+margin-top:30px;
+
+padding:15px 35px;
+
+background:#43a047;
 
 border:none;
 
-background:#2e7d32;
+border-radius:40px;
+
+font-size:18px;
 
 color:white;
 
 cursor:pointer;
 
-margin:10px;
-
-border-radius:8px;
-
-font-size:16px;
-
 transition:.3s;
 
 }
 
-button:hover{
+.botao:hover{
 
-background:#1b5e20;
+background:#2e7d32;
+
+transform:scale(1.05);
 
 }
 
@@ -145,15 +140,15 @@ padding:90px 10%;
 
 }
 
-h2{
+.titulo{
 
 text-align:center;
 
-font-size:38px;
-
-margin-bottom:30px;
+font-size:42px;
 
 color:#1b5e20;
+
+margin-bottom:50px;
 
 }
 
@@ -161,9 +156,9 @@ color:#1b5e20;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-gap:20px;
+gap:25px;
 
 }
 
@@ -171,57 +166,41 @@ gap:20px;
 
 background:white;
 
-padding:20px;
+padding:25px;
 
-border-radius:12px;
+border-radius:15px;
 
-box-shadow:0 0 10px rgba(0,0,0,.15);
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 
-transition:.3s;
+transition:.4s;
 
 }
 
 .card:hover{
 
-transform:translateY(-5px);
+transform:translateY(-8px);
 
 }
 
-img{
+.card img{
 
 width:100%;
 
+height:200px;
+
+object-fit:cover;
+
 border-radius:10px;
 
-margin-bottom:10px;
+margin-bottom:15px;
 
 }
 
-.dark{
+.card h3{
 
-background:#111;
+margin-bottom:15px;
 
-color:white;
-
-}
-
-.dark section{
-
-background:#111;
-
-}
-
-.dark .card{
-
-background:#222;
-
-color:white;
-
-}
-
-.alto{
-
-filter:contrast(150%);
+color:#2e7d32;
 
 }
 
@@ -231,51 +210,9 @@ background:#1b5e20;
 
 color:white;
 
-padding:30px;
-
 text-align:center;
 
-}
-
-input,textarea{
-
-width:100%;
-
-padding:10px;
-
-margin-top:10px;
-
-margin-bottom:15px;
-
-border-radius:8px;
-
-border:1px solid #ccc;
-
-}
-
-.quiz{
-
-background:white;
-
-padding:30px;
-
-border-radius:12px;
-
-box-shadow:0 0 10px rgba(0,0,0,.1);
-
-}
-
-.calc{
-
-background:white;
-
-padding:30px;
-
-border-radius:12px;
-
-box-shadow:0 0 10px rgba(0,0,0,.1);
-
-margin-top:30px;
+padding:40px;
 
 }
 
@@ -291,29 +228,79 @@ display:flex;
 
 flex-direction:column;
 
-z-index:999;
+gap:10px;
 
 }
 
-@media(max-width:768px){
+.acessibilidade button{
 
-nav{
+padding:10px;
+
+border:none;
+
+background:#2e7d32;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.quiz,.calc,form{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+input,textarea{
+
+width:100%;
+
+padding:12px;
+
+margin:10px 0;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+}
+
+@media(max-width:800px){
+
+header{
 
 flex-direction:column;
 
 }
 
-nav ul{
+nav{
 
-flex-wrap:wrap;
-
-justify-content:center;
+margin-top:15px;
 
 }
 
-.banner h1{
+.banner h2{
 
-font-size:35px;
+font-size:40px;
+
+}
+
+.banner p{
+
+font-size:18px;
 
 }
 
@@ -327,23 +314,19 @@ font-size:35px;
 
 <header>
 
+<h1>🌱 Agro Forte</h1>
+
 <nav>
 
-<h2>🌱 Agro Forte</h2>
+<a href="#producao">Produção</a>
 
-<ul>
+<a href="#sustentabilidade">Sustentabilidade</a>
 
-<li><a href="#producao">Produção</a></li>
+<a href="#desafios">Desafios</a>
 
-<li><a href="#sustentabilidade">Sustentabilidade</a></li>
+<a href="#futuro">Futuro</a>
 
-<li><a href="#desafios">Desafios</a></li>
-
-<li><a href="#futuro">Futuro</a></li>
-
-<li><a href="#contato">Contato</a></li>
-
-</ul>
+<a href="#contato">Contato</a>
 
 </nav>
 
@@ -351,13 +334,21 @@ font-size:35px;
 
 <div class="banner">
 
-<h1>Agro Forte, Futuro Sustentável</h1>
+<h2>Agro Forte,<br>Futuro Sustentável</h2>
 
-<p>Equilíbrio entre produção agrícola e preservação ambiental.</p>
+<p>
+
+Tecnologia, inovação e preservação ambiental trabalhando juntas para garantir alimento e qualidade de vida às futuras gerações.
+
+</p>
 
 <a href="#producao">
 
-<button>Explorar</button>
+<button class="botao">
+
+Explorar
+
+</button>
 
 </a>
 
@@ -369,27 +360,29 @@ font-size:35px;
 
 <button onclick="fonte(-2)">A-</button>
 
-<button onclick="contraste()">Contraste</button>
-
-<button onclick="modo()">Modo</button>
+<button onclick="modo()">🌙</button>
 
 </div>
 
 <section id="producao">
 
-<h2>Produção Agrícola</h2>
+<h2 class="titulo">
+
+Produção Agrícola
+
+</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80">
 
 <h3>Economia</h3>
 
 <p>
 
-O agronegócio é responsável por milhões de empregos e movimenta grande parte da economia brasileira, garantindo alimentos e desenvolvimento.
+O agronegócio movimenta bilhões de reais, gera empregos e fortalece a economia brasileira.
 
 </p>
 
@@ -397,13 +390,13 @@ O agronegócio é responsável por milhões de empregos e movimenta grande parte
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80">
 
 <h3>Agricultura de Precisão</h3>
 
 <p>
 
-GPS, sensores e inteligência artificial ajudam produtores a reduzir desperdícios e aumentar a produtividade.
+GPS, sensores e inteligência artificial aumentam a produtividade e reduzem desperdícios.
 
 </p>
 
@@ -411,13 +404,13 @@ GPS, sensores e inteligência artificial ajudam produtores a reduzir desperdíci
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80">
 
 <h3>Drones</h3>
 
 <p>
 
-Monitoram plantações, detectam pragas e auxiliam na tomada de decisões sustentáveis.
+Monitoram plantações, identificam problemas rapidamente e ajudam na tomada de decisões.
 
 </p>
 
@@ -427,19 +420,25 @@ Monitoram plantações, detectam pragas e auxiliam na tomada de decisões susten
 
 </section>
 
-<section id="sustentabilidade">
+  <section id="sustentabilidade">
 
-<h2>Sustentabilidade</h2>
+<h2 class="titulo">
+
+Sustentabilidade no Campo
+
+</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<h3>Energia Solar</h3>
+<img src="https://images.unsplash.com/photo-1497436072909-f5e4be6b2f1d?auto=format&fit=crop&w=900&q=80">
+
+<h3>☀️ Energia Renovável</h3>
 
 <p>
 
-A utilização de energia renovável reduz custos e diminui a emissão de gases poluentes.
+A utilização de painéis solares e biomassa reduz custos, diminui a emissão de carbono e torna as propriedades rurais mais sustentáveis.
 
 </p>
 
@@ -447,11 +446,13 @@ A utilização de energia renovável reduz custos e diminui a emissão de gases 
 
 <div class="card">
 
-<h3>Irrigação Inteligente</h3>
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80">
+
+<h3>💧 Irrigação Inteligente</h3>
 
 <p>
 
-Sensores medem a umidade do solo e evitam desperdício de água.
+Sensores identificam a necessidade exata de água, evitando desperdícios e aumentando a eficiência da produção agrícola.
 
 </p>
 
@@ -459,11 +460,13 @@ Sensores medem a umidade do solo e evitam desperdício de água.
 
 <div class="card">
 
-<h3>Conservação do Solo</h3>
+<img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80">
+
+<h3>🌱 Conservação do Solo</h3>
 
 <p>
 
-A rotação de culturas e o plantio direto preservam nutrientes e evitam erosões.
+Práticas como rotação de culturas e plantio direto preservam nutrientes e ajudam na recuperação do meio ambiente.
 
 </p>
 
@@ -473,9 +476,13 @@ A rotação de culturas e o plantio direto preservam nutrientes e evitam erosõe
 
 </section>
 
-  <section id="desafios">
+<section id="desafios">
 
-<h2>Desafios Ambientais</h2>
+<h2 class="titulo">
+
+Desafios Ambientais
+
+</h2>
 
 <div class="cards">
 
@@ -485,7 +492,7 @@ A rotação de culturas e o plantio direto preservam nutrientes e evitam erosõe
 
 <p>
 
-A expansão agrícola sem planejamento pode causar perda da biodiversidade, erosão do solo e alterações no clima.
+A expansão desordenada das áreas agrícolas pode provocar perda da biodiversidade e desequilíbrio dos ecossistemas.
 
 </p>
 
@@ -493,11 +500,11 @@ A expansão agrícola sem planejamento pode causar perda da biodiversidade, eros
 
 <div class="card">
 
-<h3>💧 Uso da Água</h3>
+<h3>💧 Consumo de Água</h3>
 
 <p>
 
-O consumo excessivo de água prejudica rios, nascentes e reservas naturais. O uso consciente é essencial.
+O uso excessivo dos recursos hídricos compromete rios, lagos e reservas naturais essenciais para a vida.
 
 </p>
 
@@ -505,11 +512,11 @@ O consumo excessivo de água prejudica rios, nascentes e reservas naturais. O us
 
 <div class="card">
 
-<h3>🌍 Emissão de Carbono</h3>
+<h3>🌎 Emissão de Carbono</h3>
 
 <p>
 
-Máquinas, queimadas e combustíveis fósseis aumentam os gases do efeito estufa.
+Máquinas agrícolas e queimadas contribuem para o aumento dos gases do efeito estufa.
 
 </p>
 
@@ -521,7 +528,11 @@ Máquinas, queimadas e combustíveis fósseis aumentam os gases do efeito estufa
 
 <section id="futuro">
 
-<h2>O Futuro do Agronegócio</h2>
+<h2 class="titulo">
+
+Soluções para o Futuro
+
+</h2>
 
 <div class="cards">
 
@@ -531,7 +542,7 @@ Máquinas, queimadas e combustíveis fósseis aumentam os gases do efeito estufa
 
 <p>
 
-Recupera o solo, preserva a biodiversidade e aumenta a produtividade de forma sustentável.
+Produzir alimentos enquanto recupera o solo, protege a biodiversidade e melhora a qualidade da água.
 
 </p>
 
@@ -543,7 +554,7 @@ Recupera o solo, preserva a biodiversidade e aumenta a produtividade de forma su
 
 <p>
 
-Algoritmos analisam dados e ajudam produtores a tomar decisões mais eficientes.
+Sistemas inteligentes analisam dados climáticos e ajudam produtores a tomar decisões mais sustentáveis.
 
 </p>
 
@@ -551,11 +562,11 @@ Algoritmos analisam dados e ajudam produtores a tomar decisões mais eficientes.
 
 <div class="card">
 
-<h3>☀️ Energia Limpa</h3>
+<h3>🛰️ Monitoramento por Satélite</h3>
 
 <p>
 
-Energia solar e biomassa tornam as propriedades mais sustentáveis e econômicas.
+Tecnologias espaciais permitem acompanhar plantações em tempo real e reduzir impactos ambientais.
 
 </p>
 
@@ -567,13 +578,17 @@ Energia solar e biomassa tornam as propriedades mais sustentáveis e econômicas
 
 <section>
 
-<h2>🧠 Quiz da Sustentabilidade</h2>
+<h2 class="titulo">
+
+🧠 Quiz Sustentável
+
+</h2>
 
 <div class="quiz">
 
 <p>
 
-Qual tecnologia ajuda a economizar água na agricultura?
+Qual tecnologia ajuda a reduzir o desperdício de água na agricultura?
 
 </p>
 
@@ -587,7 +602,7 @@ Irrigação Inteligente
 
 <button onclick="quiz('errado')">
 
-Queimadas Controladas
+Queimadas
 
 </button>
 
@@ -597,6 +612,8 @@ Desmatamento
 
 </button>
 
+<br><br>
+
 <h3 id="resultadoQuiz"></h3>
 
 </div>
@@ -605,26 +622,29 @@ Desmatamento
 
 <section>
 
-<h2>🌱 Calculadora de Impacto Ambiental</h2>
+<h2 class="titulo">
+
+🌱 Calculadora Verde
+
+</h2>
 
 <div class="calc">
 
 <label>
 
-Quantas árvores você acredita que uma fazenda deve plantar por ano?
+Quantas árvores sua propriedade pretende plantar?
 
 </label>
 
-<input
-type="number"
-id="arvores"
-placeholder="Digite um número">
+<input type="number" id="arvores">
 
 <button onclick="calcular()">
 
-Calcular Impacto
+Calcular
 
 </button>
+
+<br><br>
 
 <h3 id="resultadoCalc"></h3>
 
@@ -632,27 +652,33 @@ Calcular Impacto
 
 </section>
 
-<section id="contato">
+  <section id="contato">
 
-<h2>Contato e Conscientização</h2>
+<h2 class="titulo">
+
+📩 Contato e Conscientização
+
+</h2>
 
 <form>
 
 <input
 type="text"
-placeholder="Nome">
+placeholder="Nome"
+required>
 
 <input
 type="email"
-placeholder="E-mail">
+placeholder="E-mail"
+required>
 
 <textarea
-rows="5"
-placeholder="Escreva sua mensagem"></textarea>
+rows="6"
+placeholder="Escreva sua mensagem sobre sustentabilidade..."></textarea>
 
 <button type="submit">
 
-Enviar
+Enviar Mensagem
 
 </button>
 
@@ -660,19 +686,67 @@ Enviar
 
 </section>
 
-<footer>
+<section>
 
-<h3>
+<h2 class="titulo">
 
-Agro Forte • Futuro Sustentável
+📊 Nosso Compromisso
 
-</h3>
+</h2>
 
-<br>
+<div class="cards">
+
+<div class="card">
+
+<h3>🌱 Preservação</h3>
 
 <p>
 
-"Produzir hoje sem comprometer os recursos naturais das futuras gerações."
+Promover o uso consciente dos recursos naturais para garantir alimentos de qualidade sem comprometer o meio ambiente.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚜 Inovação</h3>
+
+<p>
+
+Investir em tecnologia para produzir mais utilizando menos água, energia e recursos naturais.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌍 Futuro</h3>
+
+<p>
+
+Construir um agronegócio sustentável, equilibrando crescimento econômico, responsabilidade social e preservação ambiental.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>
+
+🌱 Agro Forte
+
+</h2>
+
+<p>
+
+"Produzir hoje pensando nas futuras gerações."
 
 </p>
 
@@ -680,7 +754,15 @@ Agro Forte • Futuro Sustentável
 
 <p>
 
-Projeto desenvolvido para educação ambiental, tecnologia e sustentabilidade.
+Projeto desenvolvido para o Agrinho 2026.
+
+</p>
+
+<br>
+
+<p>
+
+Tecnologia • Sustentabilidade • Inovação • Educação Ambiental
 
 </p>
 
@@ -698,12 +780,6 @@ document.body.style.fontSize=tamanho+"px";
 
 }
 
-function contraste(){
-
-document.body.classList.toggle("alto");
-
-}
-
 function modo(){
 
 document.body.classList.toggle("dark");
@@ -714,7 +790,7 @@ function quiz(resposta){
 
 if(resposta=="certo"){
 
-document.getElementById("resultadoQuiz").innerHTML="✅ Parabéns! A irrigação inteligente reduz o desperdício de água.";
+document.getElementById("resultadoQuiz").innerHTML="✅ Parabéns! A irrigação inteligente economiza água e aumenta a eficiência agrícola.";
 
 }
 
@@ -734,7 +810,7 @@ let texto=document.getElementById("resultadoCalc");
 
 if(valor==""){
 
-texto.innerHTML="Digite um valor.";
+texto.innerHTML="Digite uma quantidade de árvores.";
 
 return;
 
@@ -742,19 +818,19 @@ return;
 
 if(valor<50){
 
-texto.innerHTML="⚠️ Poucas árvores. Aumentar o reflorestamento melhora o equilíbrio ambiental.";
+texto.innerHTML="⚠️ Poucas árvores. Investir em reflorestamento melhora a sustentabilidade.";
 
 }
 
 else if(valor<200){
 
-texto.innerHTML="🌱 Bom resultado! Sua propriedade contribui para um futuro mais sustentável.";
+texto.innerHTML="🌱 Excelente iniciativa! Sua contribuição já ajuda o meio ambiente.";
 
 }
 
 else{
 
-texto.innerHTML="🌳 Excelente! Um grande investimento em preservação ambiental.";
+texto.innerHTML="🌳 Parabéns! Sua propriedade demonstra um forte compromisso com a preservação ambiental.";
 
 }
 
@@ -768,7 +844,7 @@ cards.forEach(function(card){
 
 let pos=card.getBoundingClientRect().top;
 
-if(pos<window.innerHeight-50){
+if(pos<window.innerHeight-80){
 
 card.style.opacity="1";
 
@@ -784,7 +860,7 @@ document.querySelectorAll(".card").forEach(function(card){
 
 card.style.opacity="0";
 
-card.style.transform="translateY(40px)";
+card.style.transform="translateY(50px)";
 
 card.style.transition="1s";
 
@@ -795,107 +871,3 @@ card.style.transition="1s";
 </body>
 
 </html>
-
-<section>
-
-<h2>📊 Nossos Compromissos</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🌱 95%</h3>
-
-<p>
-
-Redução do desperdício de água com sistemas inteligentes de irrigação.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>☀️ Energia Limpa</h3>
-
-<p>
-
-Uso de fontes renováveis para diminuir a emissão de carbono no campo.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚜 Tecnologia</h3>
-
-<p>
-
-Drones, sensores e inteligência artificial auxiliam o produtor rural.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>💡 Curiosidades</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Você sabia?</h3>
-
-<p>
-
-O Brasil está entre os maiores produtores agrícolas do mundo e a adoção de tecnologias sustentáveis cresce a cada ano.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🌳 Agricultura Regenerativa</h3>
-
-<p>
-
-Além de produzir alimentos, ela recupera o solo e contribui para o equilíbrio ambiental.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💧 Economia de Água</h3>
-
-<p>
-
-Sensores conseguem identificar exatamente quando uma planta precisa ser irrigada, evitando desperdícios.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>🎯 Nossa Missão</h2>
-
-<p style="text-align:center;font-size:20px;max-width:900px;margin:auto;">
-
-Promover um agronegócio que utilize inovação, tecnologia e responsabilidade ambiental para produzir alimentos de qualidade sem comprometer os recursos naturais das futuras gerações.
-
-</p>
-
-</section>
