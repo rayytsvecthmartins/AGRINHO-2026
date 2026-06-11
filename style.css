@@ -1,214 +1,432 @@
+/* ===========================
+RESET E FUNDO
+=========================== */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
 scroll-behavior:smooth;
+font-family:"Trebuchet MS",Arial,sans-serif;
 }
 
 body{
-background:#eef6ea;
-color:#333;
-line-height:1.7;
+
+background:linear-gradient(180deg,#e3f2fd,#ffffff,#fff8e1);
+
+color:#1f2937;
+
 overflow-x:hidden;
+
+line-height:1.8;
+
 }
 
-/* CABEÇALHO */
+/* ===========================
+CABEÇALHO
+=========================== */
 
 header{
+
 position:fixed;
+
 top:0;
+
 left:0;
+
 width:100%;
-padding:18px 8%;
-background:rgba(27,94,32,.95);
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
+padding:20px 8%;
+
+background:linear-gradient(90deg,#1565c0,#1976d2,#42a5f5);
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+z-index:999;
+
 backdrop-filter:blur(10px);
-z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,.2);
+
 }
 
 header h1{
+
 color:white;
-font-size:30px;
+
+font-size:32px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+text-shadow:2px 2px 5px rgba(0,0,0,.3);
+
 }
 
 nav{
+
 display:flex;
-gap:25px;
+
+gap:30px;
+
 }
 
 nav a{
-color:white;
+
 text-decoration:none;
+
+color:white;
+
 font-weight:bold;
+
+font-size:17px;
+
 transition:.3s;
+
+padding:8px 15px;
+
+border-radius:30px;
+
 }
 
 nav a:hover{
-color:#b2ff59;
+
+background:#fbc02d;
+
+color:#1565c0;
+
+transform:translateY(-3px);
+
 }
 
-/* BANNER */
+/* ===========================
+BANNER
+=========================== */
 
 .banner{
+
 height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 flex-direction:column;
+
 text-align:center;
-padding:20px;
+
+padding:30px;
 
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
+
+linear-gradient(rgba(21,101,192,.55),rgba(229,57,53,.45)),
+
+url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1800&q=80");
 
 background-size:cover;
+
 background-position:center;
+
 }
 
 .banner h2{
-font-size:65px;
+
+font-size:70px;
+
 color:white;
+
+text-shadow:4px 4px 15px black;
+
 margin-bottom:20px;
-text-shadow:3px 3px 10px black;
+
 }
 
 .banner p{
-font-size:22px;
-max-width:850px;
+
+font-size:24px;
+
+max-width:900px;
+
 color:white;
+
+background:rgba(255,255,255,.15);
+
+padding:20px;
+
+border-radius:20px;
+
+backdrop-filter:blur(8px);
+
 }
 
 .botao{
-margin-top:30px;
-padding:15px 35px;
+
+margin-top:35px;
+
+padding:18px 45px;
+
 border:none;
-border-radius:40px;
-background:#43a047;
+
+border-radius:50px;
+
+background:#e53935;
+
 color:white;
-font-size:18px;
+
+font-size:20px;
+
+font-weight:bold;
+
 cursor:pointer;
-transition:.3s;
+
+transition:.4s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
 }
 
 .botao:hover{
-background:#2e7d32;
-transform:translateY(-4px);
+
+background:#fbc02d;
+
+color:#1565c0;
+
+transform:scale(1.08);
+
 }
 
-/* SEÇÕES */
+/* ===========================
+SEÇÕES
+=========================== */
 
 section{
+
 padding:100px 10%;
+
 }
 
 .titulo{
-font-size:42px;
+
 text-align:center;
-color:#1b5e20;
-margin-bottom:50px;
+
+font-size:50px;
+
+margin-bottom:60px;
+
+color:#1565c0;
+
+text-shadow:1px 1px 5px rgba(0,0,0,.1);
+
 }
 
 .titulo::after{
-content:"";
+
+content:"🌾 🚜 🌎";
+
 display:block;
-width:90px;
-height:4px;
-background:#43a047;
-margin:15px auto;
-border-radius:10px;
+
+margin-top:15px;
+
+font-size:28px;
+
 }
 
-/* CARDS */
+/* ===========================
+CARDS
+=========================== */
 
 .cards{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
 
 }
 
 .card{
 
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(10px);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
 transition:.4s;
+
+border-top:8px solid #1976d2;
+
+}
+
+.card:nth-child(2){
+
+border-top:8px solid #fbc02d;
+
+}
+
+.card:nth-child(3){
+
+border-top:8px solid #e53935;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
-box-shadow:0 15px 30px rgba(0,0,0,.18);
+transform:translateY(-15px) scale(1.02);
 
 }
 
 .card img{
 
 width:100%;
+
 height:220px;
+
 object-fit:cover;
-border-radius:10px;
-margin-bottom:15px;
+
+border-radius:15px;
+
+margin-bottom:20px;
+
+transition:.5s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.05);
 
 }
 
 .card h3{
 
+font-size:28px;
+
 margin-bottom:15px;
-color:#2e7d32;
+
+color:#1565c0;
 
 }
 
 .card p{
 
+font-size:17px;
+
 color:#555;
 
 }
 
-/* QUIZ */
+/* ===========================
+QUIZ E CALCULADORA
+=========================== */
 
-.quiz{
-
-background:white;
-padding:35px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-max-width:900px;
-margin:auto;
-
-}
-
-/* CALCULADORA */
-
+.quiz,
 .calc{
 
-background:white;
-padding:35px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
 max-width:900px;
+
 margin:auto;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+text-align:center;
 
 }
 
-/* FORMULÁRIO */
+.quiz p,
+.calc label{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#1565c0;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+.quiz button,
+.calc button,
+form button{
+
+background:linear-gradient(45deg,#1976d2,#42a5f5);
+
+color:white;
+
+border:none;
+
+padding:15px 30px;
+
+border-radius:40px;
+
+cursor:pointer;
+
+margin:10px;
+
+font-size:17px;
+
+font-weight:bold;
+
+transition:.4s;
+
+box-shadow:0 10px 20px rgba(25,118,210,.3);
+
+}
+
+.quiz button:hover,
+.calc button:hover,
+form button:hover{
+
+background:linear-gradient(45deg,#e53935,#fbc02d);
+
+transform:translateY(-5px) scale(1.05);
+
+color:white;
+
+}
+
+/* ===========================
+FORMULÁRIO
+=========================== */
 
 form{
 
-background:white;
-padding:35px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
 max-width:900px;
+
 margin:auto;
+
+padding:40px;
+
+background:rgba(255,255,255,.88);
+
+border-radius:25px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
 
 }
 
@@ -216,12 +434,20 @@ input,
 textarea{
 
 width:100%;
-padding:14px;
-margin:12px 0;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:16px;
+
+padding:18px;
+
+margin:15px 0;
+
+border-radius:15px;
+
+border:2px solid #90caf9;
+
+font-size:17px;
+
 transition:.3s;
+
+background:white;
 
 }
 
@@ -229,86 +455,201 @@ input:focus,
 textarea:focus{
 
 outline:none;
-border-color:#43a047;
-box-shadow:0 0 8px rgba(67,160,71,.3);
+
+border-color:#fbc02d;
+
+box-shadow:0 0 15px rgba(251,192,45,.5);
 
 }
 
-/* BOTÕES */
-
-button{
-
-padding:14px 25px;
-border:none;
-border-radius:10px;
-background:#2e7d32;
-color:white;
-cursor:pointer;
-transition:.3s;
-
-}
-
-button:hover{
-
-background:#1b5e20;
-
-}
-
-/* ACESSIBILIDADE */
+/* ===========================
+ACESSIBILIDADE
+=========================== */
 
 .acessibilidade{
 
 position:fixed;
-right:20px;
-bottom:20px;
+
+bottom:25px;
+
+right:25px;
+
 display:flex;
+
 flex-direction:column;
-gap:10px;
+
+gap:12px;
+
 z-index:999;
 
 }
 
 .acessibilidade button{
 
-width:60px;
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+font-size:18px;
+
+background:linear-gradient(45deg,#1976d2,#42a5f5);
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
 
 }
 
-/* RODAPÉ */
+.acessibilidade button:hover{
+
+background:linear-gradient(45deg,#e53935,#fbc02d);
+
+transform:scale(1.1);
+
+}
+
+/* ===========================
+RODAPÉ
+=========================== */
 
 footer{
 
-background:#1b5e20;
-color:white;
+padding:70px 20px;
+
 text-align:center;
-padding:50px 20px;
+
+background:linear-gradient(90deg,#1565c0,#1976d2,#e53935);
+
+color:white;
+
+margin-top:80px;
 
 }
 
 footer h2{
 
-margin-bottom:15px;
+font-size:40px;
+
+margin-bottom:20px;
 
 }
 
 footer p{
 
-margin:5px 0;
+font-size:18px;
+
+margin:10px 0;
 
 }
 
-/* MODO ESCURO */
+/* ===========================
+ANIMAÇÕES
+=========================== */
+
+@keyframes subir{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.card,
+.quiz,
+.calc,
+form{
+
+animation:subir 1s ease;
+
+}
+
+@keyframes flutuar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.botao{
+
+animation:flutuar 3s infinite;
+
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#e3f2fd;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(#1976d2,#e53935,#fbc02d);
+
+border-radius:20px;
+
+}
+
+/* ===========================
+MODO ESCURO
+=========================== */
 
 .dark{
 
-background:#111;
+background:#0d1b2a;
+
 color:white;
 
 }
 
 .dark section{
 
-background:#111;
+background:#0d1b2a;
 
 }
 
@@ -317,85 +658,46 @@ background:#111;
 .dark .calc,
 .dark form{
 
-background:#222;
+background:#1b263b;
+
 color:white;
 
 }
 
-.dark .card p{
+.dark p{
 
-color:#ddd;
-
-}
-
-.dark .titulo{
-
-color:#8cff8c;
+color:#f1f1f1;
 
 }
 
-/* ANIMAÇÃO */
+.dark h2,
+.dark h3{
 
-.card{
-
-animation:subir .8s ease;
-
-}
-
-@keyframes subir{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
+color:#fbc02d;
 
 }
 
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-/* SCROLL */
-
-::-webkit-scrollbar{
-
-width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:#2e7d32;
-border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-background:#d9edd6;
-
-}
-
-/* RESPONSIVO */
+/* ===========================
+RESPONSIVO
+=========================== */
 
 @media(max-width:900px){
 
 header{
 
 flex-direction:column;
-gap:15px;
+
+padding:20px;
 
 }
 
 nav{
 
 flex-wrap:wrap;
+
 justify-content:center;
+
+gap:12px;
 
 }
 
@@ -421,6 +723,12 @@ padding:80px 7%;
 
 @media(max-width:600px){
 
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
 .banner h2{
 
 font-size:34px;
@@ -429,19 +737,250 @@ font-size:34px;
 
 .titulo{
 
+font-size:34px;
+
+}
+
+.quiz button,
+.calc button,
+form button{
+
+width:100%;
+
+margin:10px 0;
+
+}
+
+.acessibilidade{
+
+right:10px;
+
+bottom:10px;
+
+}
+
+}
+
+/* ===========================
+DEGRADÊ NAS SEÇÕES
+=========================== */
+
+#producao{
+background:linear-gradient(180deg,#ffffff,#e3f2fd);
+}
+
+#sustentabilidade{
+background:linear-gradient(180deg,#e3f2fd,#fff8e1);
+}
+
+#desafios{
+background:linear-gradient(180deg,#fff8e1,#ffebee);
+}
+
+#futuro{
+background:linear-gradient(180deg,#ffebee,#ffffff);
+}
+
+/* ===========================
+EFEITO NOS TÍTULOS
+=========================== */
+
+.titulo{
+
+background:linear-gradient(90deg,#1976d2,#fbc02d,#e53935);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+}
+
+/* ===========================
+LINHAS DECORATIVAS
+=========================== */
+
+.titulo::before{
+
+content:"🌱";
+
+margin-right:10px;
+
+}
+
+.titulo::after{
+
+content:" 🚜 🌎 ☀️";
+
+font-size:24px;
+
+display:block;
+
+margin-top:10px;
+
+}
+
+/* ===========================
+EFEITO VIDRO
+=========================== */
+
+.card,
+.quiz,
+.calc,
+form{
+
+border:1px solid rgba(255,255,255,.4);
+
+backdrop-filter:blur(15px);
+
+}
+
+/* ===========================
+HOVER MAIS BONITO
+=========================== */
+
+.card:hover{
+
+transform:translateY(-15px) rotate(-1deg);
+
+}
+
+/* ===========================
+SOMBRA COLORIDA
+=========================== */
+
+.card:nth-child(1){
+
+box-shadow:0 15px 35px rgba(25,118,210,.20);
+
+}
+
+.card:nth-child(2){
+
+box-shadow:0 15px 35px rgba(251,192,45,.25);
+
+}
+
+.card:nth-child(3){
+
+box-shadow:0 15px 35px rgba(229,57,53,.20);
+
+}
+
+/* ===========================
+TEXTO SELECIONADO
+=========================== */
+
+::selection{
+
+background:#1976d2;
+
+color:white;
+
+}
+
+/* ===========================
+IMAGENS
+=========================== */
+
+img{
+
+transition:.5s;
+
+filter:saturate(115%);
+
+}
+
+img:hover{
+
+filter:saturate(140%) brightness(110%);
+
+}
+
+/* ===========================
+BOTÃO EXPLORAR
+=========================== */
+
+.botao{
+
+letter-spacing:1px;
+
+font-weight:bold;
+
+text-transform:uppercase;
+
+}
+
+/* ===========================
+EFEITO FLUTUANTE
+=========================== */
+
+.card{
+
+animation:flutuarCard 5s ease-in-out infinite;
+
+}
+
+@keyframes flutuarCard{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================
+RESPONSIVO EXTRA
+=========================== */
+
+@media(max-width:500px){
+
+.banner{
+
+padding:30px;
+
+}
+
+.banner h2{
+
 font-size:30px;
 
 }
 
-.cards{
+.banner p{
 
-grid-template-columns:1fr;
+font-size:16px;
 
 }
 
-button{
+header h1{
 
-width:100%;
+font-size:22px;
+
+}
+
+nav a{
+
+font-size:14px;
 
 }
 
